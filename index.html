@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AuraG2P Medium-to-Large Business Platform</title>
+<style>
+:root{--bg:#0b0f0e;--panel:#121a18;--accent:#c9a227;--text:#e8f0ec;--border:#2a3a34;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui;display:flex;height:100vh;}
+nav{width:220px;background:#0e1614;border-right:1px solid var(--border);padding:16px;}
+main{flex:1;padding:20px;overflow:auto;}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px;margin:10px 0;}
+button{background:#1a2421;color:var(--text);border:1px solid var(--border);padding:8px 14px;border-radius:4px;cursor:pointer;margin:4px;}
+video{width:100%;max-height:200px;background:#000;border-radius:6px;}
+</style>
+</head>
+<body>
+<nav>
+  <h3>AuraG2P M-L Platform</h3>
+  <button onclick="show('dash')">Dashboard</button>
+  <button onclick="show('ops')">Operations</button>
+  <button onclick="show('templates')">Templates</button>
+  <button onclick="show('player')">Video</button>
+  <button onclick="show('sims')">Simulations</button>
+</nav>
+<main>
+  <div id="content">
+    <h1>Medium-to-Large Scale Ready</h1>
+    <div class="card">Scale-ready dashboard, multi-template, team ops, analytics hooks. Links to complex G2PTechOffice and AuraXur OS for elite performance.</div>
+  </div>
+</main>
+<script>
+function show(sec) {
+  let html = '';
+  if (sec === 'dash') html = '<h2>Dashboard</h2><div class="card">Metrics, projects, clients — optimized for medium-large.</div>';
+  else if (sec === 'ops') html = '<h2>Operations</h2><div class="card">File structuring, deployments, AI builds — shared memory.</div>';
+  else if (sec === 'templates') html = '<h2>10 Best Templates</h2><div class="card">SaaS, Agency, Enterprise, Multi-tenant, Analytics, Collab, etc. Scaffold on demand.</div>';
+  else if (sec === 'player') html = '<h2>Explicit Video Player</h2><video controls id="vid"></video><input type="file" accept="video/*" onchange="document.getElementById(\'vid\').src=URL.createObjectURL(this.files[0])"><p>Local HTML5 required.</p>';
+  else if (sec === 'sims') html = '<h2>AuraXur OS Nested Sims</h2><div class="card">Shared memory store. One hot sim. Latency reduced. Local elite status.</div>';
+  document.getElementById('content').innerHTML = html;
+}
+</script>
+</body>
+</html>
